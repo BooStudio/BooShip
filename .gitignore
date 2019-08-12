@@ -15,4 +15,4 @@ yarn-error.log
 .gitattributes
 .env.example
 .styleci.yml
-build/*
+build/report.junit.xml
