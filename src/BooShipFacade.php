@@ -1,17 +1,14 @@
 <?php
 
-namespace BooStudio\BooShip\Facades;
+namespace BooStudio\BooShip;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class BooShipFacadeAccessor
- *
- * @author  Scotty Knows <scott@Boostudio.com.au>
+ * @see \BooStudio\BooShip\Skeleton\SkeletonClass
  */
-class BooShipFacadeAccessor extends Facade
+class BooShipFacade extends Facade
 {
-
     /**
      * Get the registered name of the component.
      *
@@ -19,6 +16,6 @@ class BooShipFacadeAccessor extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'BooShip';
+        return 'booship';
     }
 }
