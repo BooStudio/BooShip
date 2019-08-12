@@ -38,11 +38,8 @@
         },
         "laravel": {
             "providers": [
-                "BooStudio\\BooShip\\BooShipServiceProvider"
-            ],
-            "aliases": {
-                "Debugbar": "BooStudio\\BooShip\\Facade"
-            }
+                "BooStudio\\BooShip\\ServiceProviders\\BooShipServiceProviders"
+            ]
         }
     },
     "minimum-stability": "stable"
