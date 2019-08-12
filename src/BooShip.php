@@ -57,9 +57,9 @@ class BooShip
     private function buildHttpHeaders($s_type, $s_action, $n_content_len = 0, $b_incl_accno = false)
     {
         $a_headers   = array();
-        $a_headers[] = $s_type . ' ' . AusPost::API_BASE_URL . $s_action . ' HTTP/1.1';
+        $a_headers[] = $s_type . ' ' . BooShip::API_BASE_URL . $s_action . ' HTTP/1.1';
         $a_headers[] = 'Authorization: ' . 'Basic ' . base64_encode($this->username . ':' . $this->token);
-        $a_headers[] = 'Host: ' . AusPost::API_HOST;
+        $a_headers[] = 'Host: ' . BooShip::API_HOST;
         if ($n_content_len) {
             $a_headers[] = 'Content-Type: application/json';
             $a_headers[] = 'Content-Length: ' .
@@ -89,7 +89,7 @@ class BooShip
         if (
             fwrite(
                 $this->fSock,
-                implode(AusPost::HEADER_EOL, $a_headers) . AusPost::HEADER_EOL . AusPost::HEADER_EOL
+                implode(BooShip::HEADER_EOL, $a_headers) . BooShip::HEADER_EOL . BooShip::HEADER_EOL
             ) === false
         ) {
             throw new Exception('Could not write to Australia Post API');
