@@ -159,7 +159,7 @@ class BooShip
     }
     public function TestGoodAuth()
     {
-        return 'hello';
+        return $this->requestdata('goodauth', []);
     }
     public static function test()
     {
