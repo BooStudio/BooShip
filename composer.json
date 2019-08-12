@@ -2,6 +2,7 @@
     "name": "boostudio/booship",
     "description": "Wrapper to access BooShipping platform",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Scott",
