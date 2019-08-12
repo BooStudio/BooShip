@@ -22,8 +22,8 @@ class BooShip
      */
     function __construct()
     {
-        $this->username = env('BOOSHIP_USERNAME', $this->username);
-        $this->token = env('BOOSHIP_TOKEN', $this->token);
+        $this->username = config('BOOSHIP_USERNAME');
+        $this->token = config('BOOSHIP_TOKEN');
     }
     /**
      * Creates a socket connection to the API.
