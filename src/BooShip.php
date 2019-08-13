@@ -121,25 +121,9 @@ class BooShip
                     $a_hdrs[] = $s_line;
                 }
             } else {
-                $a_hdrs    = $a_data = array();
-                $b_in_hdrs = true;
-                while (!feof($this->fSock)) {
-                    $s_line = fgets($this->fSock);
-                    if ($b_in_hdrs) {
-                        $s_line = trim($s_line);
-                        if ($s_line == '') {
-                            $b_in_hdrs = false;
-                        } else {
-                            $a_hdrs[] = $s_line;
-                        }
-                    } else {
-
-                        if (is_string($s_line) && (is_array(json_decode($s_line, true)) ? true : false)) {
-                            $a_data[] = trim($s_line);
-                        }
-                    }
+                if (is_string($s_line) && (is_array(json_decode($s_line, true)) ? true : false)) {
+                    $a_data[] = trim($s_line);
                 }
-                return array($a_hdrs, $a_data);
             }
         }
 
