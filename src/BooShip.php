@@ -163,8 +163,8 @@ class BooShip
     {
         return $this->requestdata('goodauth', []);
     }
-    public static function test()
+    public function GetQuotes($r_data)
     {
-        return 'test';
+        return $this->requestdata('getquotes', $r_data);
     }
 }
