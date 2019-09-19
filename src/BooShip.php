@@ -81,7 +81,7 @@ class BooShip
      */
     private function sendPostRequest($s_action, $a_data)
     {
-        $s_json = json_encode($a_data);
+        $s_json = json_encode(['data' => $a_data]);
 
         $this->createSocket();
         $a_headers = $this->buildHttpHeaders('POST', $s_action, strlen($s_json), true);
