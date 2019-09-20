@@ -2,7 +2,7 @@
 
 namespace BooStudio\BooShip;
 
-class Order
+class OrderItems
 {
     public $length;
     public $height;
