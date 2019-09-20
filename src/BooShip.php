@@ -167,4 +167,8 @@ class BooShip
     {
         return $this->requestdata('getquotes', $r_data);
     }
+    public function Create_Shipment_Label($r_data)
+    {
+        return $this->requestdata('getlabel', $r_data);
+    }
 }
