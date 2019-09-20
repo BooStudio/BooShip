@@ -8,4 +8,6 @@ class Order
     public $height;
     public $width;
     public $weight;
+    public $product_type;
+    public $product_id;
 }
