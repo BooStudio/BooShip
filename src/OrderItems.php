@@ -10,4 +10,6 @@ class OrderItems
     public $weight;
     public $product_type;
     public $product_id;
+    public $insurance_amount;
+    public $provider;
 }
