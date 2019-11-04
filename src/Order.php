@@ -22,7 +22,6 @@ class Order
     public $From_Address = "";
     public $From_email = "";
     public $From_phone = "";
-    public $order_ref = "BOOShip Order";
     public $atl = true;
 
 
