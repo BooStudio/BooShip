@@ -12,7 +12,7 @@ class Order
     public $to_Suburb = "";
     public $to_State = "";
     public $to_Address = "";
-    
+
 
     //From Details
     public $From_name = array();
@@ -22,7 +22,9 @@ class Order
     public $From_Address = "";
     public $From_email = "";
     public $From_phone = "";
-    
+    public $order_ref = "BOOShip Order";
+    public $atl = true;
+
 
     //order reference
 
@@ -30,5 +32,4 @@ class Order
 
     //items
     public $items = array();
-    
 }
