@@ -173,6 +173,6 @@ class BooShip
     }
     public function Get_Labels($r_data)
     {
-        return $this->requestdata('getlabel', $r_data);
+        return $this->requestdata('downloadlabel', $r_data);
     }
 }
