@@ -175,4 +175,8 @@ class BooShip
     {
         return $this->requestdata('downloadlabel', $r_data);
     }
+    public function Get_Tracking($r_data)
+    {
+        return $this->requestdata('gettracking', $r_data);
+    }
 }
