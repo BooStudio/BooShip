@@ -7,7 +7,7 @@ class BooShip
     protected $username = "";
     protected $token = "";
     const    API_SCHEME   = 'tls://';
-    const    API_HOST     = 'shipping.dev.boostudio.com.au';
+    protected    $API_HOST     = 'shipping.dev.boostudio.com.au';
     const    API_PORT     = 443;                            // ssl port
     const    API_BASE_URL = '/api/shipping/';        // for production use, remove '/test'
     const   HEADER_EOL = "\r\n";
@@ -24,17 +24,18 @@ class BooShip
     {
         $this->username = config('booship.BOOSHIP_USERNAME');
         $this->token = config('booship.BOOSHIP_TOKEN');
+        $this->$API_HOST = config('booship.BOOSHIP_HOST');
     }
     /**
      * Creates a socket connection to the API.
-     *
+     *fAPI_HOST
      * @throws Exception if the socket cannot be opened
      */
     private function createSocket()
     {
         $i_timeout = 15;        // seconds
         if (($this->fSock = fsockopen(
-                BooShip::API_SCHEME . BooShip::API_HOST,
+                BooShip::API_SCHEME . $this->API_HOST,
                 BooShip::API_PORT,
                 $errno,
                 $errstr,
@@ -59,7 +60,7 @@ class BooShip
         $a_headers   = array();
         $a_headers[] = $s_type . ' ' . BooShip::API_BASE_URL . $s_action . ' HTTP/1.1';
         $a_headers[] = 'Authorization: ' . 'Basic ' . base64_encode($this->username . ':' . $this->token);
-        $a_headers[] = 'Host: ' . BooShip::API_HOST;
+        $a_headers[] = 'Host: ' . $this->API_HOST;
         if ($n_content_len) {
             $a_headers[] = 'Content-Type: application/json';
             $a_headers[] = 'Content-Length: ' .
