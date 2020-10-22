@@ -24,7 +24,7 @@ class BooShip
     {
         $this->username = config('booship.BOOSHIP_USERNAME');
         $this->token = config('booship.BOOSHIP_TOKEN');
-        $this->API_HOST = config('booship.BOOSHIP_HOST');
+        // $this->API_HOST = config('booship.BOOSHIP_HOST');
     }
     /**
      * Creates a socket connection to the API.
