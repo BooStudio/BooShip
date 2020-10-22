@@ -7,7 +7,7 @@ class BooShip
     protected $username = "";
     protected $token = "";
     const    API_SCHEME   = 'tls://';
-    protected    API_HOST     = 'shipping.dev.boostudio.com.au';
+    const    API_HOST     = 'shipping.dev.boostudio.com.au';
     const    API_PORT     = 443;                            // ssl port
     const    API_BASE_URL = '/api/shipping/';        // for production use, remove '/test'
     const   HEADER_EOL = "\r\n";
