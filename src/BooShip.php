@@ -35,13 +35,12 @@ class BooShip
     {
         $i_timeout = 15;        // seconds
         if (($this->fSock = fsockopen(
-                BooShip::API_SCHEME . $this->API_HOST,
-                BooShip::API_PORT,
-                $errno,
-                $errstr,
-                $i_timeout
-            )) === false
-        ) {
+            BooShip::API_SCHEME . $this->API_HOST,
+            BooShip::API_PORT,
+            $errno,
+            $errstr,
+            $i_timeout
+        )) === false) {
             throw new Exception('Could not connect to BooShip API: ' . $errstr, $errno);
         }
     }
@@ -179,5 +178,9 @@ class BooShip
     public function Get_Tracking($r_data)
     {
         return $this->requestdata('gettracking', $r_data);
+    }
+    public function Create_return_labels($r_data)
+    {
+        return $this->requestdata('returns', $r_data);
     }
 }
