@@ -7,7 +7,7 @@ class BooShip
     protected $username = "";
     protected $token = "";
     const    API_SCHEME   = 'tls://';
-    protected    $API_HOST     = 'shipping.dev.boostudio.com.au';
+    protected    API_HOST     = 'shipping.dev.boostudio.com.au';
     const    API_PORT     = 443;                            // ssl port
     const    API_BASE_URL = '/api/shipping/';        // for production use, remove '/test'
     const   HEADER_EOL = "\r\n";
@@ -24,7 +24,7 @@ class BooShip
     {
         $this->username = config('booship.BOOSHIP_USERNAME');
         $this->token = config('booship.BOOSHIP_TOKEN');
-        $this->$API_HOST = config('booship.BOOSHIP_HOST');
+        $this->API_HOST = config('booship.BOOSHIP_HOST');
     }
     /**
      * Creates a socket connection to the API.
