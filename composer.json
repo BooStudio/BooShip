@@ -16,9 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7",
-        "illuminate/support": "^8",
-        "laminas/laminas-soap": "^2.9"
+        "php": "^7"
     },
     "require-dev": {},
     "autoload": {
