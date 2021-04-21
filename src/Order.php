@@ -15,14 +15,14 @@ class Order
 
 
     //From Details
-    public $From_name = array();
+    public $From_name = "";
     public $From = "";
     public $From_Suburb = "";
     public $From_State = "";
     public $From_Address = "";
     public $From_email = "";
     public $From_phone = "";
-    public $atl = true;
+    public $ATL = false;
 
 
     //order reference
